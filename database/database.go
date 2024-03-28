@@ -16,7 +16,8 @@ func Connect() error {
 
 	//dsn := "root:Ed2H4be54A41hfCBcg346AgBBDa1bCDa@tcp(viaduct.proxy.rlwy.net:17031)/railway" //->Orgha
 	//dsn := "root:CCE5EC-f6Abef2eCga1d1gAD5e3FBD12@tcp(viaduct.proxy.rlwy.net:48576)/railway?parseTime=true" // -> Saddam
-	dsn := "root:admin1@3@tcp(localhost:3306)/healtech?charset=utf8mb4&parseTime=True&loc=Local"
+	//dsn := "root:admin1@3@tcp(localhost:3306)/healtech?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "sql6694884:e4A8ATm8wN@tcp(sql6.freemysqlhosting.net:3306)/sql6694884?charset=utf8mb4&parseTime=True&loc=Local"
 
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {

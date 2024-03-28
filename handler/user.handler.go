@@ -281,7 +281,7 @@ func GetActiveUserList(c *fiber.Ctx) error {
 
 	var activeUsers []model.User
 
-	if err := db.Order("created_at desc").Find(&activeUsers, "status = ? AND mode = ?", 3, "u").Error; err != nil {
+	if err := db.Order("id desc").Find(&activeUsers, "status = ? AND mode = ?", 3, "u").Error; err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"status":  "error",
 			"message": "Failed to Retrieve Active Users",
